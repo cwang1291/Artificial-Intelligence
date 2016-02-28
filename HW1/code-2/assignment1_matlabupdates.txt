@@ -1,0 +1,38 @@
+Hi All:
+
+
+Some students ask whether they can know the form of attribute and class parameters in the function, there is one easy way to do this:
+
+
+add word  keyboard           to the line below the function ,then you can see the parameters in workspace and see their format.
+
+
+
+For users whose matlab version is 2013 or before, you can ignore the below email safely.
+
+
+Since matlab has changed its "cell2mat" function after version 2014,even if you've finished the DecisionTreeNode.m, you would still get error log from matlab. For instance:
+
+
+Press F5 to run main file, then you got error log as:
+
+
+```matlab
+
+
+Error using cell2mat (line 52)CELL2MAT does not support cell arrays containing cell arraysor objects.
+Error in biograph.biograph/hgCorrectFontSize>mycell2mat (line43)    m = cell2mat(c);
+Error in biograph.biograph/hgCorrectFontSize (line 34)   set(mycell2mat(get(mycell2mat(get(h.Edges,'hgline')),'UserData')),'FontSize',edgeFontSize)   Error in biograph.biograph/hgUpdate (line 32)    h.hgCorrectFontSize
+Error in biograph.bgguiRbgguiResize (line 220)bh.hgUpdate
+
+
+```
+
+
+However you can just press the continue button to get the figure. And the needed information would still be printed out in the Command Window. So in nutshell, this bug has no influence on your this assignment.
+
+
+If you are further interested in this bug and want a solution, you can check this post.
+
+
+http://www.mathworks.com/matlabcentral/answers/195044-error-using-biograph-function
